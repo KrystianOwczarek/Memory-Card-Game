@@ -1,0 +1,17 @@
+html
+{
+    font-size: 20px;
+    color: #000;
+}
+
+body
+{
+    background: rgb(158,1,209);
+    background: linear-gradient(191deg, rgba(158,1,209,1) 0%, rgba(203,62,166,1) 100%);
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
