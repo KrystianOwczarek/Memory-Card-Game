@@ -6,10 +6,154 @@
         <title>Gra w pamięć</title>
         <meta name="description" content="gra w pamięć, karty, odkyrwanie kart"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/fontello.css">
         <link rel="stylesheet" type="text/css" href="graWPamiec.css">
     </head>
     <body>
-        <div class="container"></div>
+        <div class="container">
+            <div class="mainContainer">
+                <h1>SELECT YOUR LEVEL OF DIFFICULTY</h1>
+                <div class="box">
+                    <div class="difficultyLevel" id="easy"><p>EASY</p></div>
+                    <div class="difficultyLevel" id="normal"><p>NORMAL</p></div>            
+                    <div class="difficultyLevel" id="hard"><p>HARD</p></div>    
+                </div>
+            </div>
+
+            <div class="easyContainer">
+                <div class="backArrow"><i class="demo-icon icon-left-open"></i></div>
+                <h1>Memory Card Game</h1>
+                <div class="board">
+                    <div class="column">
+                        <div class="card" data-id="c0"></div>
+                        <div class="card" data-id="1"></div>
+                        <div class="card" data-id="2"></div>
+                        <div class="card" data-id="3"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                </div>
+                <div class="turnCounter">Turn counter: 0</div>
+            </div>
+
+            <div class="normalContainer">
+                <div class="backArrow"><i class="demo-icon icon-left-open"></i></div>
+                <h1>Memory Card Game</h1>
+                <div class="board">
+                    <div class="column">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                </div>
+                <div class="turnCounter">Turn counter: 0</div>
+            </div>
+
+            <div class="hardContainer">
+                <div class="backArrow"><i class="demo-icon icon-left-open"></i></div>
+                <h1>Memory Card Game</h1>
+                <div class="board">
+                    <div class="column">
+                        <div class="card" data-id="c0"></div>
+                        <div class="card" data-id="c1"></div>
+                        <div class="card" data-id="c2"></div>
+                        <div class="card" data-id="c3"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                </div>
+                <div class="turnCounter">Turn counter: 0</div>
+            </div>
+
+        </div>
         <script src="graWPamiec.js" type="text/javascript" async defer></script>
     </body>
 </html>

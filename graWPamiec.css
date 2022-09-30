@@ -6,12 +6,275 @@ html
 
 body
 {
-    background: rgb(158,1,209);
-    background: linear-gradient(191deg, rgba(158,1,209,1) 0%, rgba(203,62,166,1) 100%);
+    background: rgb(255,134,224);
+    background: linear-gradient(to right bottom, #e4a7db, #d245db, #a22dce, #7d3ac5, #4d56bd);
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+    padding: 0;
 }
 
 *
 {
     box-sizing: border-box;
 }
+
+.container
+{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/*pojemnik z wyborem trudnośći*/
+.mainContainer
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.mainContainer.visibility
+{
+    display: none;
+}
+
+/*nagłówek "SELECT YOUR LEVEL OF DIFFICULTY"*/
+h1
+{
+    letter-spacing: 2px;;
+    font-size: 2rem;
+    color: #f1f1f1;
+    margin-bottom: 0;
+    text-shadow: 0px 5px 9px rgba(43, 43, 43, 1);
+}
+
+/*pojemnik na kafelki*/
+.box
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 45em;
+    height: 30em;
+}
+
+/*kafelki do wyboru poziomu trudnośći*/
+.difficultyLevel
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+    height: 8.8em;
+    -webkit-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
+    -moz-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
+    box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
+    background-color: rgb(162,45,206,100);
+    margin: 1rem;
+    border-radius: 2.5px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.difficultyLevel:hover
+{
+    background-color: rgba(0,0,0,0.466);
+}
+
+.difficultyLevel p
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 4px;
+    font-size: 1.6rem;
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    transition: all .2s ease-in-out;
+}
+
+.difficultyLevel p:hover
+{
+    color: rgb(162,45,206,100);
+}
+
+/*łatwym poziom trudnośći*/
+.easyContainer
+{
+    display: none;
+}
+
+.easyContainer.visibility
+{
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/*normalny poziom trudnośći*/
+.normalContainer
+{
+    display: none;
+}
+
+.normalContainer.visibility
+{
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/*trudny poziom trudnośći*/
+.hardContainer
+{
+    display: none;
+}
+
+.hardContainer.visibility
+{
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/*strzałka powrotu do poziomu trudnośći*/
+.backArrow
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 3em;
+    left: 3em;
+    width: 2.2em;
+    height: 2.2em;
+    border-radius: 2rem;
+    background-color: #d65bdb;
+    -webkit-box-shadow: 0px 0px 29px -7px rgba(43, 43, 43, 1);
+    -moz-box-shadow: 0px 0px 29px -7px rgba(43, 43, 43, 1);
+    box-shadow: 0px 0px 29px -7px rgba(43, 43, 43, 1);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.backArrow:hover
+{
+    background-color: rgba(0,0,0,0.466);
+}
+
+/*ikona strzałki*/
+.demo-icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.demo-icon:hover
+{
+    color: #e4a7db;
+}
+
+/*plansza łatwego poziomu*/
+.easyContainer .board
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 32em;
+    height: 32em;
+    background-color: rgba(0,0,0,0.466);
+    -webkit-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
+    -moz-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
+    box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
+    border-radius: 2.5px;
+    margin-top: 40px;;
+}
+
+/*plansza normalnego poziomu*/
+.normalContainer .board
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 45em;
+    height: 32em;
+    background-color: rgba(0,0,0,0.466);
+    -webkit-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
+    -moz-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
+    box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
+    border-radius: 2.5px;
+    margin-top: 40px;;
+}
+
+/*plansza trudnego poziomu*/
+.hardContainer .board
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 60em;
+    height: 32em;
+    background-color: rgba(0,0,0,0.466);
+    -webkit-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
+    -moz-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
+    box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
+    border-radius: 2.5px;
+    margin-top: 40px;;
+}
+
+/*kolumny w których znajdują się karty*/
+.column
+{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/*karty do odkrywania*/
+.card
+{
+    width: 6em;
+    height: 6em;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 2px;
+    border: 2px solid #a22dce;
+    background-color: rgb(162,45,206,100);
+}
+
+/*licznik*/
+.turnCounter
+{
+    letter-spacing: 2px;
+    margin-top: 40px;
+    font-size: 1.4rem;
+    color: #f1f1f1;
+    margin-bottom: 0;
+    text-shadow: 0px 5px 9px rgba(43, 43, 43, 1);
+}
+
 
