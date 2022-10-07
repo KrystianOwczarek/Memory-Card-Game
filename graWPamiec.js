@@ -39,6 +39,9 @@
     let hardTurnCounter = 0;
     //zmienna odpowiadająca za blokowanie się kart
     let lock = false;
+    let endEasyGameArray = [] ;
+    let endNormalGameArray = [];
+    let endHardGameArray = [];
 
 function selectDifficulty()
 {
@@ -108,6 +111,9 @@ function checkMathForEasyBoard()
     easyChoiceCardId = [];
     //jeśli długość tablicy z trafionymi kartami jest równa 8 (czyli tyle ile jest par na łatwej planszy)
     if(easyCardsWin.length == 8){
+        EASY_BOARD.setAttribute('data-end','true');
+        let endEasyGame = EASY_BOARD.getAttribute('data-end');
+        endEasyGameArray.push(endEasyGame);
         //zmień kolor napisu
         EASY_BOARD.style.color = '#fff';
         //powieksz go i planszę
@@ -117,6 +123,7 @@ function checkMathForEasyBoard()
     }
     //odblokuj po sprawdzeniu kart znajdujących się w tablicy
     lock = false;
+    endGame();
 }
 
 //funkcja pokazująca karty
@@ -189,11 +196,15 @@ function checkMathForNormalBoard()
     normalChoiceCardId = [];
     if(normalCardsWin.length == 12)
     {
+        NORMAL_BOARD.setAttribute('data-end','true');
+        let endNormalGame = NORMAL_BOARD.getAttribute('data-end');
+        endNormalGameArray.push(endNormalGame);
         NORMAL_BOARD.style.color = '#fff';
         NORMAL_BOARD.style.fontSize = '1.5rem';
         NORMAL_BOARD.textContent = `You did it ${normalTurnCounter} turns`;
     }
     lock = false;
+    endGame();
 }
 
 function showNormalCard()
@@ -249,6 +260,9 @@ function checkMathForHardBoard()
     hardChoiceCardId = [];
     HARD_TURN_COUNTER.innerHTML = `Turn counter: ${hardTurnCounter}`;
     if(hardCardsWin.length == 16){
+        HARD_BOARD.setAttribute('data-end','true');
+        let endHardGame = HARD_BOARD.getAttribute('data-end');
+        endHardGameArray.push(endHardGame);
         HARD_BOARD.style.cssText = `
             font-size: 1.2rem;
             color: #fff;
@@ -256,6 +270,7 @@ function checkMathForHardBoard()
         HARD_BOARD.textContent = `You did it ${hardTurnCounter} turns`;
     }
     lock = false;
+    endGame();
 }
 
 function showHardCard()
@@ -290,10 +305,20 @@ function startHardBoard()
     }
 }
 
+function endGame()
+{
+    //jeśli wszystkie poziomy trudności zostaną zakończone to wyświetl gratulacje
+    if(endEasyGameArray[0] == 'true' && endNormalGameArray[0] == 'true' && endHardGameArray[0] == 'true'){
+        MAIN_CONTAINER.classList.toggle('noDisplay');
+        EASY_CONTAINER.classList.toggle('noDisplay');
+        NORMAL_CONTAINER.classList.toggle('noDisplay');  
+        HARD_CONTAINER.classList.toggle('noDisplay');
+        END_GAME.classList.toggle('visibility');
+    }
+}
 
 function start()
 {
-    
     startHardBoard();
     startNormalBoard();
     startEasyBoard();

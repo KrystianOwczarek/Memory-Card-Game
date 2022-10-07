@@ -147,6 +147,11 @@ button:hover
     height: 100%;
 }
 
+.easyContainer.noDisplay
+{
+    display: none;
+}
+
 /*normalny poziom trudnośći*/
 .normalContainer
 {
@@ -164,6 +169,11 @@ button:hover
     height: 100%;
 }
 
+.normalContainer.noDisplay
+{
+    display: none;
+}
+
 /*trudny poziom trudnośći*/
 .hardContainer
 {
@@ -179,6 +189,11 @@ button:hover
     align-items: center;
     width: 100%;
     height: 100%;
+}
+
+.hardContainer.noDisplay
+{
+    display: none;
 }
 
 /*strzałka powrotu do poziomu trudnośći*/
@@ -224,7 +239,7 @@ button:hover
 }
 
 /*plansza łatwego poziomu*/
-.easyContainer .board
+#easyBoard
 {
     display: flex;
     flex-flow: column wrap;
@@ -242,7 +257,7 @@ button:hover
 }
 
 /*plansza normalnego poziomu*/
-.normalContainer .board
+#normalBoard
 {
     display: flex;
     flex-flow: column wrap;
@@ -260,7 +275,7 @@ button:hover
 }
 
 /*plansza trudnego poziomu*/
-.hardContainer .board
+#hardBoard
 {
     display: flex;
     flex-flow: column wrap;
@@ -300,11 +315,6 @@ button:hover
 }
 
 /*koniec gry*/
-.noDisplay
-{
-    display: none;
-}
-
 .endGame
 {
     display: none;
@@ -325,7 +335,7 @@ button:hover
 .endGame button
 {
     position: absolute;
-    bottom: 3rem;
+    bottom: 4rem;
 }
 
 p
