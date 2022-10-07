@@ -103,6 +103,33 @@ h1
     color: rgb(162,45,206,100);
 }
 
+/*restart gry*/
+button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15em;
+    height: 4em;
+    -webkit-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
+    -moz-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
+    box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
+    background-color: #8237c1;
+    margin: 1rem;
+    border-radius: 2.5px;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    color: #f1f1f1;
+    font-size: 18px;
+}
+
+button:hover
+{
+    background-color: rgba(0,0,0,0.466);
+    color: #8237c1;
+}
+
 /*łatwym poziom trudnośći*/
 .easyContainer
 {
@@ -200,10 +227,10 @@ h1
 .easyContainer .board
 {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    width: 32em;
+    width: 38em;
     height: 32em;
     background-color: rgba(0,0,0,0.466);
     -webkit-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
@@ -211,16 +238,17 @@ h1
     box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
     border-radius: 2.5px;
     margin-top: 40px;;
+    transition: all .4s ease-in-out;
 }
 
 /*plansza normalnego poziomu*/
 .normalContainer .board
 {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    width: 45em;
+    width: 50em;
     height: 32em;
     background-color: rgba(0,0,0,0.466);
     -webkit-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
@@ -228,16 +256,17 @@ h1
     box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
     border-radius: 2.5px;
     margin-top: 40px;;
+    transition: all .4s ease-in-out;
 }
 
 /*plansza trudnego poziomu*/
 .hardContainer .board
 {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    width: 60em;
+    width: 65em;
     height: 32em;
     background-color: rgba(0,0,0,0.466);
     -webkit-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
@@ -245,13 +274,7 @@ h1
     box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
     border-radius: 2.5px;
     margin-top: 40px;;
-}
-
-/*kolumny w których znajdują się karty*/
-.column
-{
-    display: flex;
-    flex-flow: column nowrap;
+    transition: all .4s ease-in-out;
 }
 
 /*karty do odkrywania*/
@@ -259,22 +282,57 @@ h1
 {
     width: 6em;
     height: 6em;
-    margin: 10px;
     cursor: pointer;
     border-radius: 2px;
     border: 2px solid #a22dce;
-    background-color: rgb(162,45,206,100);
+    margin: 18px;
 }
 
 /*licznik*/
 .turnCounter
 {
     letter-spacing: 2px;
-    margin-top: 40px;
+    margin-top: 2rem;
     font-size: 1.4rem;
     color: #f1f1f1;
     margin-bottom: 0;
     text-shadow: 0px 5px 9px rgba(43, 43, 43, 1);
 }
 
+/*koniec gry*/
+.noDisplay
+{
+    display: none;
+}
+
+.endGame
+{
+    display: none;
+}
+
+.endGame.visibility
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 2.2rem;
+    color: #f1f1f1;
+}
+
+.endGame button
+{
+    position: absolute;
+    bottom: 3rem;
+}
+
+p
+{
+    display: flex;
+    text-align: center;
+    line-height: 5rem;
+    width: 48%;
+}
 
