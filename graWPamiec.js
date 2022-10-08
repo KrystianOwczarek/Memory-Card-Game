@@ -110,7 +110,7 @@ function checkMathForEasyBoard()
     //po każdym odkryciu pary czyścimy tablice z id kart
     easyChoiceCardId = [];
     //jeśli długość tablicy z trafionymi kartami jest równa 8 (czyli tyle ile jest par na łatwej planszy)
-    if(easyCardsWin.length == 8){
+    if(easyCardsWin.length == 0){
         EASY_BOARD.setAttribute('data-end','true');
         let endEasyGame = EASY_BOARD.getAttribute('data-end');
         endEasyGameArray.push(endEasyGame);
@@ -194,7 +194,7 @@ function checkMathForNormalBoard()
     NORMAL_TURN_COUNTER.innerHTML = `Turn counter: ${normalTurnCounter}`;
     normalChoiceCard = [];
     normalChoiceCardId = [];
-    if(normalCardsWin.length == 12)
+    if(normalCardsWin.length == 0)
     {
         NORMAL_BOARD.setAttribute('data-end','true');
         let endNormalGame = NORMAL_BOARD.getAttribute('data-end');
@@ -259,7 +259,7 @@ function checkMathForHardBoard()
     hardChoiceCard = [];
     hardChoiceCardId = [];
     HARD_TURN_COUNTER.innerHTML = `Turn counter: ${hardTurnCounter}`;
-    if(hardCardsWin.length == 16){
+    if(hardCardsWin.length == 0){
         HARD_BOARD.setAttribute('data-end','true');
         let endHardGame = HARD_BOARD.getAttribute('data-end');
         endHardGameArray.push(endHardGame);
@@ -308,7 +308,8 @@ function startHardBoard()
 function endGame()
 {
     //jeśli wszystkie poziomy trudności zostaną zakończone to wyświetl gratulacje
-    if(endEasyGameArray[0] == 'true' && endNormalGameArray[0] == 'true' && endHardGameArray[0] == 'true'){
+    let endAllGameArray = endEasyGameArray.concat(endNormalGameArray, endHardGameArray);
+    if(endAllGameArray.length == 3){
         MAIN_CONTAINER.classList.toggle('noDisplay');
         EASY_CONTAINER.classList.toggle('noDisplay');
         NORMAL_CONTAINER.classList.toggle('noDisplay');  
