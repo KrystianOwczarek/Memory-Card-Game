@@ -43,22 +43,20 @@
     let endNormalGameArray = [];
     let endHardGameArray = [];
 
+//funkcja odpowiadająca za wybór poziomu trudnośći
 function selectDifficulty()
 {
     EASY.addEventListener('click', () => {
-        //alert('EASY');
         MAIN_CONTAINER.classList.toggle('visibility');
         EASY_CONTAINER.classList.toggle('visibility');
     })
 
-    NORMAL.addEventListener('click', () => {
-        //alert('NORMAL');
+    NORMAL.addEventListener('click', () => {;
         MAIN_CONTAINER.classList.toggle('visibility');
         NORMAL_CONTAINER.classList.toggle('visibility');
     })
 
     HARD.addEventListener('click', () => {
-        //alert('HARD');
         MAIN_CONTAINER.classList.toggle('visibility');
         HARD_CONTAINER.classList.toggle('visibility');
     })
@@ -110,14 +108,16 @@ function checkMathForEasyBoard()
     //po każdym odkryciu pary czyścimy tablice z id kart
     easyChoiceCardId = [];
     //jeśli długość tablicy z trafionymi kartami jest równa 8 (czyli tyle ile jest par na łatwej planszy)
-    if(easyCardsWin.length == 0){
+    if(easyCardsWin.length == 8){
         EASY_BOARD.setAttribute('data-end','true');
         let endEasyGame = EASY_BOARD.getAttribute('data-end');
         endEasyGameArray.push(endEasyGame);
         //zmień kolor napisu
         EASY_BOARD.style.color = '#fff';
-        //powieksz go i planszę
-        EASY_BOARD.style.fontSize = '2rem';
+        //powieksz kolor i planszę
+        EASY_BOARD.style.width = '40em';
+        EASY_BOARD.style.height = '40em';
+        EASY_BOARD.style.fontSize = '1.5rem';
         //wyświetl napis z ifnormacją odnośnie ilośći tur, w których udało ci się wygrać
         EASY_BOARD.textContent = `You did it ${easyTurnCounter} turns!`;
     }
@@ -194,12 +194,14 @@ function checkMathForNormalBoard()
     NORMAL_TURN_COUNTER.innerHTML = `Turn counter: ${normalTurnCounter}`;
     normalChoiceCard = [];
     normalChoiceCardId = [];
-    if(normalCardsWin.length == 0)
+    if(normalCardsWin.length == 12)
     {
         NORMAL_BOARD.setAttribute('data-end','true');
         let endNormalGame = NORMAL_BOARD.getAttribute('data-end');
         endNormalGameArray.push(endNormalGame);
         NORMAL_BOARD.style.color = '#fff';
+        NORMAL_BOARD.style.width = '40em';
+        NORMAL_BOARD.style.height = '40em';
         NORMAL_BOARD.style.fontSize = '1.5rem';
         NORMAL_BOARD.textContent = `You did it ${normalTurnCounter} turns`;
     }
@@ -259,14 +261,14 @@ function checkMathForHardBoard()
     hardChoiceCard = [];
     hardChoiceCardId = [];
     HARD_TURN_COUNTER.innerHTML = `Turn counter: ${hardTurnCounter}`;
-    if(hardCardsWin.length == 0){
+    if(hardCardsWin.length == 16){
         HARD_BOARD.setAttribute('data-end','true');
         let endHardGame = HARD_BOARD.getAttribute('data-end');
         endHardGameArray.push(endHardGame);
-        HARD_BOARD.style.cssText = `
-            font-size: 1.2rem;
-            color: #fff;
-        `;
+        HARD_BOARD.style.color = '#fff';
+        HARD_BOARD.style.width = '40em';
+        HARD_BOARD.style.height = '40em';
+        HARD_BOARD.style.fontSize = '1.5rem';
         HARD_BOARD.textContent = `You did it ${hardTurnCounter} turns`;
     }
     lock = false;
@@ -320,10 +322,10 @@ function endGame()
 
 function start()
 {
-    startHardBoard();
-    startNormalBoard();
-    startEasyBoard();
-    backArrow();
     selectDifficulty();
+    backArrow();
+    startEasyBoard();
+    startNormalBoard();
+    startHardBoard();
 }
 window.onload = start;
