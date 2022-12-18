@@ -7,6 +7,8 @@ html
 body
 {
     background: rgb(255,134,224);
+    background: -webkit-gradient(linear, left top, right bottom, from(#e4a7db), color-stop(#d245db), color-stop(#a22dce), color-stop(#7d3ac5), to(#4d56bd));
+    background: -o-linear-gradient(left top, #e4a7db, #d245db, #a22dce, #7d3ac5, #4d56bd);
     background: linear-gradient(to right bottom, #e4a7db, #d245db, #a22dce, #7d3ac5, #4d56bd);
     font-family: 'Source Code Pro', monospace;
     margin: 0;
@@ -15,11 +17,14 @@ body
 
 *
 {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .container
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -28,10 +33,19 @@ body
 /*pojemnik z wyborem trudnośći*/
 .mainContainer
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100vw;
     height: 100vh;
 }
@@ -54,10 +68,19 @@ h1
 /*pojemnik na kafelki*/
 .box
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 45em;
     height: 30em;
 }
@@ -65,18 +88,25 @@ h1
 /*kafelki do wyboru poziomu trudnośći*/
 .difficultyLevel
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 10em;
     height: 8.8em;
     -webkit-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
-    -moz-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
     box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
     background-color: rgb(162,45,206,100);
     margin: 1rem;
     border-radius: 2.5px;
     cursor: pointer;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
 
@@ -87,14 +117,22 @@ h1
 
 .difficultyLevel p
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     letter-spacing: 4px;
     font-size: 1.6rem;
     color: #f1f1f1;
     width: 100%;
     height: 100%;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
 
@@ -106,19 +144,26 @@ h1
 /*restart gry*/
 button
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 15em;
     height: 4em;
     -webkit-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
-    -moz-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
     box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
     background-color: #8237c1;
     margin: 1rem;
     border-radius: 2.5px;
     border: none;
     cursor: pointer;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     color: #f1f1f1;
     font-size: 18px;
@@ -139,10 +184,21 @@ button:hover
 .easyContainer.visibility
 {
     
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     height: 100%;
 }
@@ -155,18 +211,28 @@ button:hover
 /*plansza łatwego poziomu*/
 #easyBoard
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 38em;
     height: 32em;
     background-color: rgba(0,0,0,0.466);
     -webkit-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
-    -moz-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
     box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
     border-radius: 2.5px;
     margin-top: 40px;;
+    -webkit-transition: all .4s ease-in-out;;
+    -o-transition: all .4s ease-in-out;;
     transition: all .4s ease-in-out;
 }
 
@@ -179,10 +245,21 @@ button:hover
 .normalContainer.visibility
 {
     
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     height: 100%;
 }
@@ -195,18 +272,28 @@ button:hover
 /*plansza normalnego poziomu*/
 #normalBoard
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 50em;
     height: 32em;
     background-color: rgba(0,0,0,0.466);
     -webkit-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
-    -moz-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
     box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
     border-radius: 2.5px;
     margin-top: 40px;;
+    -webkit-transition: all .4s ease-in-out;;
+    -o-transition: all .4s ease-in-out;;
     transition: all .4s ease-in-out;
 }
 
@@ -219,10 +306,21 @@ button:hover
 .hardContainer.visibility
 {
     
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     height: 100%;
 }
@@ -235,27 +333,43 @@ button:hover
 /*plansza trudnego poziomu*/
 #hardBoard
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 65em;
     height: 32em;
     background-color: rgba(0,0,0,0.466);
     -webkit-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
-    -moz-box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
     box-shadow: 0px 0px 46px -12px rgba(43, 43, 43, 1);
     border-radius: 2.5px;
     margin-top: 40px;;
+    -webkit-transition: all .4s ease-in-out;;
+    -o-transition: all .4s ease-in-out;;
     transition: all .4s ease-in-out;
 }
 
 /*strzałka powrotu do wyboru poziomów trudności*/
 .backArrow
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     top: 3em;
     left: 3em;
@@ -264,9 +378,10 @@ button:hover
     border-radius: 2rem;
     background-color: #d65bdb;
     -webkit-box-shadow: 0px 0px 29px -7px rgba(43, 43, 43, 1);
-    -moz-box-shadow: 0px 0px 29px -7px rgba(43, 43, 43, 1);
     box-shadow: 0px 0px 29px -7px rgba(43, 43, 43, 1);
     cursor: pointer;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
 
@@ -278,12 +393,20 @@ button:hover
 /*ikona strzałki*/
 .demo-icon
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     height: 100%;
     color: #fff;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 
@@ -322,10 +445,19 @@ button:hover
 
 .endGame.visibility
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     height: 100vh;
     font-size: 2.2rem;
@@ -340,6 +472,8 @@ button:hover
 
 p
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     text-align: center;
     line-height: 5rem;
