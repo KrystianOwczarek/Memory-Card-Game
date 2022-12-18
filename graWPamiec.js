@@ -119,7 +119,7 @@ function checkMathForEasyBoard()
         EASY_BOARD.style.height = '40em';
         EASY_BOARD.style.fontSize = '1.5rem';
         //wyświetl napis z ifnormacją odnośnie ilośći tur, w których udało ci się wygrać
-        EASY_BOARD.textContent = `You did it ${easyTurnCounter} turns!`;
+        EASY_BOARD.textContent = `You did it in ${easyTurnCounter} turns!`;
     }
     //odblokuj po sprawdzeniu kart znajdujących się w tablicy
     lock = false;
@@ -203,7 +203,7 @@ function checkMathForNormalBoard()
         NORMAL_BOARD.style.width = '40em';
         NORMAL_BOARD.style.height = '40em';
         NORMAL_BOARD.style.fontSize = '1.5rem';
-        NORMAL_BOARD.textContent = `You did it ${normalTurnCounter} turns`;
+        NORMAL_BOARD.textContent = `You did it in ${normalTurnCounter} turns`;
     }
     lock = false;
     endGame();
@@ -269,7 +269,7 @@ function checkMathForHardBoard()
         HARD_BOARD.style.width = '40em';
         HARD_BOARD.style.height = '40em';
         HARD_BOARD.style.fontSize = '1.5rem';
-        HARD_BOARD.textContent = `You did it ${hardTurnCounter} turns`;
+        HARD_BOARD.textContent = `You did it in ${hardTurnCounter} turns`;
     }
     lock = false;
     endGame();
